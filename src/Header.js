@@ -8,13 +8,18 @@ export default class Header extends React.Component {
 
    onChange = event => this.setState({inputValue: event.target.value})
 
+   onClick = () => {
+      this.props.onAdd(this.state.inputValue);
+      this.setState({inputValue: ''});
+   }
+
    render() {
       return (
          <Fragment>
                <div className="header">{this.props.title}</div>
                <div>
                   <input value={this.state.inputValue} onChange={this.onChange}/>
-                  <button>Add</button>
+                  <button onClick={this.onClick}>Add</button>
                </div>
          </Fragment>
       )
