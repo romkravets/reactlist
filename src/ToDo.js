@@ -4,10 +4,11 @@ export default class ToDo extends React.Component {
    render() {
       return (
          <Fragment>
-            <div>first</div>
-            <div>second</div>
-            <div>third</div>
+            {this.props.todoList.map(todo => <div key={todo}>{todo}</div>)}
          </Fragment>
       )
    }
 }
+
+ToDo.defaultProps = { todList: []};
+ToDo.displayName = 'BodyList';

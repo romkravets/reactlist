@@ -4,12 +4,12 @@ import ToDo from './ToDo.js'
 import './App.css';
 
 function App() {
-  //state = {todos: ['first','second','third']};
+  state = {todos: ['first','second','third']};
   return (
     <div className="App">
       <header className="App-header">
         <Header title={"This is our ToDo"}/>
-        <ToDo/>
+        <ToDo todoList={this.state.todos}/>
       </header>
     </div>
   );
