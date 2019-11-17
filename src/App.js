@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './Header.js'
 import ToDo from './ToDo.js'
+import Clock from './Clock.js'
 import './App.css';
 
 class App extends React.Component {
@@ -14,6 +15,7 @@ class App extends React.Component {
         <header className="App-header">
           <Header title={"This is our ToDo"} onAdd={this.onAdd}/>
           <ToDo todoList={this.state.todos}/>
+          <Clock/>
         </header>
       </div>
     );
